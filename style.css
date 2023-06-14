@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,700;1,700&display=swap');
+:root{
+  --Dark-cyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  --Very-dark-blue: hsl(212, 21%, 14%);
+  --Dark-grayish-blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img,
+picture,
+svg{
+  display: block;
+  max-width: 100%;
+}
+body{
+ Font-size: 14px;
+ background-color: var(--Cream);
+
+ /* for this project only */
+ display: grid;
+ place-content: center;
+ min-height: 100vh;
+ margin: 1rem;
+}
+ @media (min-width: 600px){
+  body{
+   display: grid;
+   place-items: center;
+   min-height: 100vh;
+   margin: 1rem;
+  }
+}
+.button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  color: var(--White);
+  background-color: var(--Dark-cyan);
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  width: 100%;
+  border: none;
+}
+button:hover{
+  cursor: pointer;
+  background-color: hsl(158, 57%, 28%);
+}
+.product{
+  display: grid;
+  background-color: var(--White);
+  max-width: 600px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+  @media (min-width: 600px){
+   .product{
+     grid-template-columns: 1fr 1fr;
+    }
+  }
+.product__content{
+  display: grid;
+  background-color: var(--White);
+  gap: 1rem;
+  text-align: center;
+  padding: 1.5rem;
+}
+p.product__category{
+  font-size: 14px;
+  color: var(--Dark-grayish-blue);
+  font-weight: 500;
+  letter-spacing: .5rem;
+  text-align: start;
+}
+h1.product__title{
+ font-family: "Fraunces", sans-serif;
+ font-weight: 700;
+ font-size: 30px;
+ text-align: start;
+}
+p{
+  color: var(--Dark-grayish-blue);
+  text-align: start;
+}
+.price-discount{
+  display: flex;
+  align-items: center;
+  gap: 1em;
+
+}
+p.product__original-price{
+  text-decoration-line: line-through;
+  color: var(--Dark-grayish-blue);
+}
+p.product__discount-price{
+  font-family: "Fraunces", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  color: var(--Dark-cyan);
+  text-align: start;
+}
